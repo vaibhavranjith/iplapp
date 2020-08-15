@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "iplapp"
+    }
+  },
+  "defaultProject": "iplapp",
+  "cli": {
+    "analytics": "d9ea8434-2e42-4d69-bd0e-ebffa9dca52c"
+  }
 }
