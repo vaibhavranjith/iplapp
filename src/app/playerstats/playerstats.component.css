@@ -1,0 +1,26 @@
+.table{
+    /* font-family: 'Libre Caslon Display', serif; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    }
+th{
+    font-weight:1000;
+    /* background-color:burlywood; */
+    background-color:#CD5C5C;
+}
+.dr:hover{
+    transform: scale(1.05);
+    background-color:antiquewhite;
+    font-weight:600;
+    color:darkslategray;
+    box-shadow: 5px 5px 5px 10px rgba(0.3,0,0,0);
+}
+.left-hd{
+    border-top-left-radius:10%;
+}
+.right-hd{
+    border-top-right-radius:10%;
+}
+.selectbox{
+    margin-top:80px;
+}

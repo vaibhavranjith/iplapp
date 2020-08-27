@@ -1,1 +1,54 @@
-<p>biddingstats works!</p>
+<div class="container pagebox">
+    <div class="row">
+        <div class="col">
+            <div *ngFor="let m of maxplayers">
+                <h3>Maximum paid {{m.role}}</h3>
+                <table class="table table-hover"> 
+                    <tr>
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Role</th>
+                    </tr>
+                    <tr *ngFor="let p of m.players;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{p.label}}</td>
+                        <td>{{p.name}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.role}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container search-bar">
+                <div class="row">
+                    <div class='col-7'>
+                        <input class="form-control" type="text" [(ngModel)]="searchname" placeholder="Search player" >
+                    </div>
+                    <div class='col-2'>
+                        <button type="button" id="search-btn" class="btn btn-info s-btn" (click)="searchf()">Search</button>
+                    </div>
+
+                    <table class="table table-hover mt-3"> 
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Role</th>
+                        </tr>
+                        <tr *ngFor="let p of searchres;index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{p.label}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.price}}</td>
+                            <td>{{p.role}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

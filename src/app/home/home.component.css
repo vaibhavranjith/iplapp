@@ -1,0 +1,19 @@
+.table{
+/* font-family: 'Libre Caslon Display', serif; */
+font-family: 'Nunito', sans-serif;
+font-weight: 700;
+}
+.pagebox{
+    margin-top:80px;
+}
+th{
+    font-weight:1000;
+    background-color:#CD5C5C;
+}
+.dr:hover{
+    transform: scale(1.05);
+    background-color:antiquewhite;
+    font-weight:600;
+    color:darkslategray;
+    box-shadow: 5px 5px 5px 10px rgba(0.3,0,0,0);
+}

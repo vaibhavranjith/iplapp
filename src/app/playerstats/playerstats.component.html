@@ -1,1 +1,87 @@
-<p>playerstats works!</p>
+<div class="container selectbox">
+<select class="form-control" [(ngModel)]="teamQuery" (change)="getPlayer()" >
+    <option class="opt1" value="MI">MI</option>
+    <option value="RCB">RCB</option>
+    <option value="DC">DC</option>
+    <option value="CSK">CSK</option>
+    <option value="RR">RR</option>
+    <option value="KKR">KKR</option>
+    <option value="SRH">SRH</option>
+    <option value="KXIP">KXIP</option>
+</select>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="showspinner; else elseBlock">
+
+            <table class="table table-responsive mt-3">
+                <tr>
+                    <th class="left-hd">#</th>
+                    <th>Label</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th class="right-hd">Role</th>
+                </tr>
+                <tr class="dr" *ngFor="let player of players;index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{player.label}}</td>
+                    <td>{{player.name}}</td>
+                    <td>{{player.price}}</td>
+                    <td>{{player.role}}</td>
+                </tr>
+            </table>
+
+            </div>
+
+            <ng-template #elseBlock>
+                <div class="spinner-border text-warning" role="status">
+                    <span class="sr-only mt-10 ml-10">Loading...</span>
+                </div>
+            </ng-template>
+
+
+
+        </div>
+        <div class="col">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div *ngIf="showspinner; else elseBlock">
+                            <div class="fixedchart">
+                                <div *ngIf="piestatus">
+                                    <google-chart [data]="pieChart" (chartSelect)='select($event)'></google-chart>
+                                </div>
+                                </div>
+                        </div>
+                        <ng-template #elseBlock>
+                            <div class="spinner-border text-warning" role="status">
+                                <span class="sr-only mt-10 ml-10">Loading...</span>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <div class="col">
+                        <div *ngIf="pieselected">
+                        <table class="table table-responsive">
+                            <tr>
+                                <th>#</th>
+                                <th>Label</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Role</th>
+                            </tr>
+                            <tr class="dr" *ngFor="let player of selroleplayers;index as i">
+                                <td>{{i+1}}</td>
+                                <td>{{player.label}}</td>
+                                <td>{{player.name}}</td>
+                                <td>{{player.price}}</td>
+                                <td>{{player.role}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

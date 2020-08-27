@@ -8,7 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { PlayerstatsComponent } from './playerstats/playerstats.component';
 import { TeamstatsComponent } from './teamstats/teamstats.component';
 import { BiddingstatsComponent } from './biddingstats/biddingstats.component';
-
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,10 @@ import { BiddingstatsComponent } from './biddingstats/biddingstats.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

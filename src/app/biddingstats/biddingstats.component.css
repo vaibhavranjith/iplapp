@@ -1,0 +1,13 @@
+.table{
+    /* font-family: 'Libre Caslon Display', serif; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    }
+    th{
+        font-weight:1000;
+        background-color:#CD5C5C;
+    
+    }
+.pagebox{
+    margin-top:80px;
+}

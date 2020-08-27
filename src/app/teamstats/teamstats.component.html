@@ -1,1 +1,14 @@
-<p>teamstats works!</p>
+<div class="container pagebox">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="bargraphstatus">
+                <google-chart [data]="barChart" (chartSelect)='select($event)'></google-chart>
+            </div>
+        </div>
+        <div class="col">
+            <div *ngIf="piestatus">
+                <google-chart [data]="pieChart"></google-chart>
+            </div>
+        </div>
+    </div>
+</div>
