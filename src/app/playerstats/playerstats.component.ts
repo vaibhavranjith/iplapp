@@ -7,6 +7,7 @@ import { rolecount } from '../shared/model/rolecount.model';
 import { ChartSelectEvent } from 'ng2-google-charts'; 
 import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/template';
 @Component({
+
   selector: 'app-playerstats',
   templateUrl: './playerstats.component.html',
   styleUrls: ['./playerstats.component.css']
